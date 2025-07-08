@@ -172,8 +172,8 @@ function HeroSection() {
             <strong>Colabore. Cresça. Inspire.</strong>
           </Subtitle>
           <ButtonGroup>
-            <GreenButton to="/ejs">Conheça as EJs</GreenButton>
-            <WhiteButton to="/cadastro">Cadastre sua EJ</WhiteButton>
+            <GreenButton to="/ranking">Conheça as EJs</GreenButton>
+            <WhiteButton to="/login">Cadastre sua EJ</WhiteButton>
           </ButtonGroup>
         </TextContainer>
         <SideImage src="/mockup.png" alt="mockup" />
@@ -492,7 +492,7 @@ function RankingSection() {
           </CardWrapper>
         ))}
       </CardsContainer>
-      <RankingButton onClick={() => alert('Navegar para ranking geral')}>Ranking geral</RankingButton>
+      <RankingButton onClick={() => to="/ranking"}>Ranking geral</RankingButton>
     </RankingPageWrapper>
   );
 }

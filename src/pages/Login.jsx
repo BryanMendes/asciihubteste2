@@ -7,9 +7,9 @@ const Page = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   width: 100vw;
-  color: white;
+  color: ${({ theme }) => theme.colors.text.x100};
   padding: 20px;
   font-family: 'Arial', sans-serif;
   box-sizing: border-box;
@@ -19,6 +19,7 @@ const Page = styled.div`
   background-position: center;
   background-attachment: fixed; /* Adicionado para fixar o fundo */
   position: relative;
+  margin-top: 80px; /* Offset for the fixed header */
 
   &::before {
     content: '';
@@ -30,6 +31,11 @@ const Page = styled.div`
     background-color: #061380;
     opacity: 0.8;
     z-index: 0;
+  }
+
+  @media (max-width: 768px) {
+    min-height: calc(100vh - 60px);
+    margin-top: 60px;
   }
 `;
 
